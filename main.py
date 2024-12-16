@@ -16,10 +16,12 @@ def character_appearance(path_to_file):
                 empty_dict[i] += 1
             else:
                 empty_dict[i] = 1
-    print(empty_dict)
+    return(empty_dict)
         
-    
-# count = (main("books/frankenstein.txt"))
-# print(count)
+print("--- Begin report of books/frankenstein.txt ---")
+count = (main("books/frankenstein.txt"))
+print(f"{count} words found in the document")
 
-(character_appearance("books/frankenstein.txt"))
+results = (character_appearance("books/frankenstein.txt"))
+for key, values in results.items():
+    print(f"the {key} character was found {values} times")

@@ -9,7 +9,7 @@ def main(path_to_file):
 def character_appearance(path_to_file):
     empty_dict = {}
     with open(path_to_file) as f:
-        file_contents = f.read()
+        file_contents = f.read().lower()
         for i in file_contents:
             # check in empty_dict if the key exists, if not create.
             if i in empty_dict:
